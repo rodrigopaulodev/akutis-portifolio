@@ -55,7 +55,7 @@ export default function App() {
       <div className="pointer-events-none absolute top-12 right-0 w-72 h-72 dot-grid" aria-hidden="true" />
       <div className="pointer-events-none absolute bottom-0 left-0 w-72 h-72 dot-grid" aria-hidden="true" />
       {/* Hero Section */}
-      <section className="container mx-auto px-4 py-16 md:py-24">
+      <section className="relative container mx-auto px-4 py-16 md:py-24">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -90,7 +90,7 @@ export default function App() {
       </section>
 
       {/* Features Section */}
-      <section className="container mx-auto px-4 py-16 md:py-24">
+      <section className="relative container mx-auto px-4 py-16 md:py-24">
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -112,7 +112,7 @@ export default function App() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="bg-card rounded-xl p-6 border border-border hover:shadow-lg transition-shadow"
+              className="bg-card rounded-xl p-6 border border-border hover:border-[#2563eb]/50 hover:shadow-[0_0_28px_rgba(37,99,235,0.18)] transition-all"
             >
               <div className="w-12 h-12 bg-[#2563eb]/10 rounded-lg flex items-center justify-center mb-4">
                 <feature.icon className="w-6 h-6 text-[#2563eb]" />
@@ -125,7 +125,7 @@ export default function App() {
       </section>
 
       {/* App Preview Section */}
-      <section className="container mx-auto px-4 py-16 md:py-24">
+      <section className="relative container mx-auto px-4 py-16 md:py-24">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
@@ -174,7 +174,7 @@ export default function App() {
       </section>
 
       {/* Benefits Section */}
-      <section className="container mx-auto px-4 py-16 md:py-24 bg-muted/50 rounded-3xl">
+      <section className="relative container mx-auto px-4 py-16 md:py-24 bg-muted/50 rounded-3xl">
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -196,7 +196,7 @@ export default function App() {
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.4, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="flex items-start gap-3 bg-background p-4 rounded-lg"
+              className="flex items-start gap-3 bg-card border border-border p-4 rounded-lg"
             >
               <CheckCircle className="w-5 h-5 text-[#2563eb] flex-shrink-0 mt-0.5" />
               <span>{benefit}</span>
@@ -206,7 +206,7 @@ export default function App() {
       </section>
 
       {/* CTA Section */}
-      <section className="container mx-auto px-4 py-16 md:py-24">
+      <section className="relative container mx-auto px-4 py-16 md:py-24">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -233,7 +233,7 @@ export default function App() {
       </section>
 
       {/* Footer */}
-      <footer className="container mx-auto px-4 py-8 border-t border-border">
+      <footer className="relative container mx-auto px-4 py-8 border-t border-border">
         <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-muted-foreground">
           <div className="flex items-center gap-2">
             <ImageWithFallback
