@@ -7,6 +7,9 @@ dist/
 # Logs
 *.log
 
+# Claude Code local config
+.claude/
+
 # Editor / OS
 .vscode/
 .idea/
