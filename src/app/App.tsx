@@ -1,7 +1,7 @@
 import { motion } from "motion/react";
 import { Calendar, Clock, Users, Sparkles, CheckCircle, ArrowRight } from "lucide-react";
 import { ImageWithFallback } from "./components/ImageWithFallback";
-import logoAkutis from "../imports/logo-5.png";
+import logoAkutis from "../imports/logo-white.png";
 
 export default function App() {
   const features = [
@@ -37,7 +37,12 @@ export default function App() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-background to-muted/30">
+    <div className="relative min-h-screen bg-background overflow-x-clip">
+      {/* Camadas decorativas de fundo */}
+      <div className="pointer-events-none absolute inset-0 diagonal-lines" aria-hidden="true" />
+      <div className="pointer-events-none absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-5xl h-[600px] hero-glow" aria-hidden="true" />
+      <div className="pointer-events-none absolute top-12 right-0 w-72 h-72 dot-grid" aria-hidden="true" />
+      <div className="pointer-events-none absolute bottom-0 left-0 w-72 h-72 dot-grid" aria-hidden="true" />
       {/* Hero Section */}
       <section className="container mx-auto px-4 py-16 md:py-24">
         <motion.div
@@ -66,7 +71,7 @@ export default function App() {
               Solicitar Acesso ao MVP
               <ArrowRight className="w-5 h-5" />
             </button>
-            <button className="bg-secondary hover:bg-secondary/80 text-secondary-foreground px-8 py-4 rounded-lg transition-colors">
+            <button className="border border-border bg-card/60 hover:bg-secondary text-secondary-foreground px-8 py-4 rounded-lg transition-colors">
               Ver Demonstração
             </button>
           </div>
@@ -149,7 +154,7 @@ export default function App() {
           >
             <div className="absolute inset-0 bg-gradient-to-tr from-[#2563eb]/20 to-transparent rounded-2xl blur-3xl"></div>
             <ImageWithFallback
-              src="https://images.unsplash.com/photo-1512428559087-560fa5ceab42?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwyfHxzY2hlZHVsaW5nJTIwYXBwJTIwbW9kZXJuJTIwYnVzaW5lc3MlMjBwcm9mZXNzaW9uYWx8ZW58MXx8fHwxNzgwOTY4ODkxfDA&ixlib=rb-4.1.0&q=80&w=1080"
+              src="/src/imports/barbeiro.jpg"
               alt="Akutis em dispositivo móvel"
               className="relative rounded-2xl shadow-2xl w-full object-cover"
             />
