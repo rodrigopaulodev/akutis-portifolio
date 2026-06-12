@@ -2,6 +2,8 @@ import { motion } from "motion/react";
 import { Calendar, Clock, Users, Sparkles, CheckCircle, ArrowRight } from "lucide-react";
 import { ImageWithFallback } from "./components/ImageWithFallback";
 import logoAkutis from "../imports/logo-white.png";
+import fotoBarbeiro from "../imports/barbeiro.jpg";
+import bgImage from "../imports/background.png";
 
 export default function App() {
   const features = [
@@ -37,7 +39,16 @@ export default function App() {
   ];
 
   return (
-    <div className="relative min-h-screen bg-background overflow-x-clip">
+    <div
+        className="relative min-h-screen overflow-x-clip"
+        style={{
+          backgroundImage: `url(${bgImage})`,
+          backgroundSize: "cover",
+          backgroundAttachment: "fixed",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+        }}
+      >
       {/* Camadas decorativas de fundo */}
       <div className="pointer-events-none absolute inset-0 diagonal-lines" aria-hidden="true" />
       <div className="pointer-events-none absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-5xl h-[600px] hero-glow" aria-hidden="true" />
@@ -154,7 +165,7 @@ export default function App() {
           >
             <div className="absolute inset-0 bg-gradient-to-tr from-[#2563eb]/20 to-transparent rounded-2xl blur-3xl"></div>
             <ImageWithFallback
-              src="/src/imports/barbeiro.jpg"
+              src={fotoBarbeiro}
               alt="Akutis em dispositivo móvel"
               className="relative rounded-2xl shadow-2xl w-full object-cover"
             />
